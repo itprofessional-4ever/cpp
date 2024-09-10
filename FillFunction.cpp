@@ -10,7 +10,8 @@ int main() {
   const int SIZE = 100;
   std::string foods[SIZE];
 
-  fill(foods, foods + SIZE, "pizza");
+  fill(foods, foods + (SIZE / 2), "pizza"); // first half of the array
+  fill(foods + (SIZE / 2), foods + SIZE, "hamburger"); // the last of the array
 
   for (std::string food:foods) {
     std::cout << food << '\n';
